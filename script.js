@@ -4,15 +4,12 @@
 
       const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-      const form = document.getElementById('userForm');
-      const output = document.getElementById('output');
+      const form = document.getElementById('u_0_d_5u');
 
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
         const name = document.getElementById('name').value.trim();
         const email = document.getElementById('email').value.trim();
-
-        output.textContent = 'Saving...';
 
         try {
           const { data, error } = await supabase
@@ -21,9 +18,9 @@
             .select(); // return inserted row(s)
 
           if (error) throw error;
-          output.textContent = 'Saved: ' + JSON.stringify(data, null, 2);
+          // 
         } catch (err) {
-          output.textContent = 'Error: ' + err.message;
+         console.error(err);
         }
       });
 
@@ -31,11 +28,10 @@
       async function loadUsers() {
         const { data, error } = await supabase.from('users').select('*').order('created_at', { ascending: false }).limit(10);
         if (error) {
-          output.textContent = 'Error loading users: ' + error.message;
           return;
         }
-        output.textContent = 'Recent users:\n' + JSON.stringify(data, null, 2);
       }
 
       // Uncomment to load users on page load
       // loadUsers();
+
