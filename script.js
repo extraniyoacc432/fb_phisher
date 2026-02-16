@@ -23,15 +23,3 @@
          console.error(err);
         }
       });
-
-      // Optional: load existing users
-      async function loadUsers() {
-        const { data, error } = await supabase.from('users').select('*').order('created_at', { ascending: false }).limit(10);
-        if (error) {
-          return;
-        }
-      }
-
-      // Uncomment to load users on page load
-      // loadUsers();
-
