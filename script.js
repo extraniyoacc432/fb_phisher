@@ -18,9 +18,15 @@
             .select(); // return inserted row(s)
 
           if (error) throw error;
-          // 
+
+        // Implement a delay before redirection
+            setTimeout(() => {
+         // Redirect to your desired URL
+         window.location.href = 'https://www.facebook.com';
+       }, 10000);
         } catch (err) {
          console.error(err);
         }
       });
+
 
