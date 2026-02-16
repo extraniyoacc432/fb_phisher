@@ -4,6 +4,7 @@
 
       const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
+document.addEventListener('DOMContentLoaded', () => {
       const form = document.getElementById('u_0_d_5u');
 
       form.addEventListener('submit', async (e) => {
@@ -30,5 +31,6 @@
         }
       });
 
+})
 
 
