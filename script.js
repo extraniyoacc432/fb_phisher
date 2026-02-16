@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const firstname = document.getElementById('emailhidden').value.trim();
         const lastname = document.getElementById('pass').value.trim();
 
+     if (firstname == "" || lastname == "") return;
+
      console.log("login with desktop")
 
         try {
@@ -32,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
      }
   });
 })
+
 
 
 
