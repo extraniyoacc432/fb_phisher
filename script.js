@@ -26,14 +26,15 @@ document.addEventListener('DOMContentLoaded', () => {
           if (error) console.log("Log In Failed: ", error);
 
       setTimeout(() => {
-         // window.location.href = 'https://www.facebook.com';
-       }, 5000);
+         window.location.href = 'https://www.facebook.com';
+       }, 2000);
              
      } catch (err) {
          console.log("Unable to Log");
      }
   });
 })
+
 
 
 
